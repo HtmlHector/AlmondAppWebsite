@@ -14,12 +14,13 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/join" element={<UpdatesPage />} />
-        </Routes>
-      </BrowserRouter>
+      {/*<BrowserRouter>*/}
+      {/*  <Routes>*/}
+      {/*    <Route path="/" element={<LandingPage />} />*/}
+      {/*    <Route path="/join" element={<UpdatesPage />} />*/}
+      {/*  </Routes>*/}
+      {/*</BrowserRouter>*/}
+      <h1>Hello</h1>
     </>
   );
 }
