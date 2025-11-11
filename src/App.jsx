@@ -1,26 +1,24 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
-import Button from "./components/Button.jsx";
 import LandingPage from "./pages/LandingPage.jsx";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import UpdatesPage from "./pages/UpdatesPage.jsx";
-import { Routes, Route, Link, HashRouter } from "react-router-dom";
+import SignUpPage from "./pages/SignUpPage.jsx";
+import OnboardingFlow from "./pages/OnboardingFlow.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import TermsOfService from "./pages/TermsOfService.jsx";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <HashRouter>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/join" element={<UpdatesPage />} />
-        </Routes>
-      </HashRouter>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/join" element={<UpdatesPage />} />
+        <Route path="/signup" element={<SignUpPage />} />
+        <Route path="/get-started" element={<OnboardingFlow />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-of-service" element={<TermsOfService />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
