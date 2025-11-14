@@ -40,7 +40,7 @@ export default function UpdatesPage() {
         <div>
           <h2 className={"text-[1.8rem] font-semibold"}>Join Now</h2>
           <p className={"text-[#8F8F8F] italic"}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam,
+            Get early access and stay updated on the latest features.
           </p>
         </div>
         <div className={"flex flex-col gap-[1.1em]"}>

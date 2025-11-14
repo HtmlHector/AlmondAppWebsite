@@ -15,8 +15,8 @@ function App() {
         <Route path="/join" element={<UpdatesPage />} />
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/get-started" element={<OnboardingFlow />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/terms-of-service" element={<TermsOfService />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="/termsofservice" element={<TermsOfService />} />
       </Routes>
     </BrowserRouter>
   );
