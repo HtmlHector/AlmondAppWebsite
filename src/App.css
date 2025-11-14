@@ -1,7 +1,105 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Friends Font Family */
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-UltraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-UltraLightItalic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-Normal.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-NormalItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-SemiBoldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-BlackItalic.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-UltraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Friends';
+    src: url('/fonts/Friends-UltraBoldItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
 
 /* Design System Variables */
 :root {
@@ -42,7 +140,7 @@
 }
 
 body {
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Friends", -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #ffffff;
@@ -52,7 +150,7 @@ body {
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "Friends", -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 700;
     line-height: 1.2;
     color: var(--color-gray-900);
@@ -80,7 +178,7 @@ p {
 
 /* Buttons */
 button, .button {
-    font-family: "Inter", sans-serif;
+    font-family: "Friends", sans-serif;
     font-weight: 500;
     padding: 0.875rem 2rem;
     border-radius: 50px;
@@ -130,7 +228,7 @@ button, .button {
 
 /* Forms */
 input, textarea {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Friends", sans-serif;
     background-color: var(--color-gray-50);
     border: 1px solid var(--color-gray-200);
     width: 100%;
