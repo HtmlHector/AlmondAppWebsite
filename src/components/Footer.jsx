@@ -47,8 +47,8 @@ export default function Footer() {
       { name: 'Partners', href: '#partners' }
     ],
     legal: [
-      { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' },
+      { name: 'Privacy Policy', href: '/privacypolicy' },
+      { name: 'Terms of Service', href: '/termsofservice' },
       { name: 'Cookie Policy', href: '#cookies' },
       { name: 'Data Security', href: '#security' },
       { name: 'GDPR', href: '#gdpr' }
