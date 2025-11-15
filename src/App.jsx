@@ -12,9 +12,9 @@ function AppRoutes() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const redirectPath = sessionStorage.getItem('redirectPath');
+    const redirectPath = sessionStorage.getItem("redirectPath");
     if (redirectPath) {
-      sessionStorage.removeItem('redirectPath');
+      sessionStorage.removeItem("redirectPath");
       navigate(redirectPath);
     }
   }, [navigate]);

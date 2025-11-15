@@ -1,5 +1,16 @@
 import { Link } from "react-router-dom";
 
+const contactEmail = "support@downloadalmonds.tech";
+
+function Section({ title, children }) {
+  return (
+    <section className="mb-8">
+      <h2 className="text-2xl font-bold mb-4">{title}</h2>
+      {children}
+    </section>
+  );
+}
+
 function PrivacyPolicy() {
   return (
     <div className="min-h-screen bg-white">
@@ -17,246 +28,205 @@ function PrivacyPolicy() {
       {/* Content */}
       <div className="max-w-4xl mx-auto px-6 py-12">
         <div className="prose prose-lg max-w-none">
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">1. Introduction</h2>
+          <Section title="1. Introduction">
             <p>
-              Welcome to Almonds ("we," "our," or "us"). We are committed to protecting your privacy and
-              ensuring the security of your personal information. This Privacy Policy explains how we collect,
-              use, disclose, and safeguard your information when you use our mobile application (the "App").
+              Welcome to Almonds (“we,” “our,” “us”). We are committed to protecting your
+              privacy and ensuring the security of your personal information when you use
+              our mobile and web experiences (“App”). This Privacy Policy explains the data
+              we collect, how we use it, and the choices available to you.
             </p>
-            <p className="mt-4">
-              Please read this privacy policy carefully. If you do not agree with the terms of this privacy
-              policy, please do not access the App.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">2. Information We Collect</h2>
-
-            <h3 className="text-xl font-semibold mt-6 mb-3">2.1 Personal Information</h3>
-            <p>We may collect personal information that you voluntarily provide to us when you:</p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>Register for an account</li>
-              <li>Use our App features</li>
-              <li>Contact us for support</li>
-            </ul>
-            <p className="mt-4">This information may include:</p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>Email address</li>
-              <li>Name (if provided via Apple Sign In)</li>
-              <li>Account credentials</li>
-              <li>User preferences and settings</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold mt-6 mb-3">2.2 Automatically Collected Information</h3>
-            <p>When you use the App, we may automatically collect certain information, including:</p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>Device information (model, operating system version)</li>
-              <li>App usage data and analytics</li>
-              <li>Crash reports and diagnostic data</li>
-            </ul>
-
-            <h3 className="text-xl font-semibold mt-6 mb-3">2.3 Camera and Scanning Data</h3>
             <p>
-              The App requires camera access to scan product barcodes. We do not store or transmit photos
-              or video from your camera. The camera is used solely to read barcode information, which is
-              processed locally on your device and then discarded. Only the barcode number is sent to our
-              servers to retrieve product information.
+              Please read this policy carefully. By using the App, you agree to the terms
+              described below. If you disagree with any part of it, please discontinue using
+              the App.
             </p>
+          </Section>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">2.4 Product Scan History</h3>
-            <p>
-              We may store information about products you scan, including:
-            </p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>Product names and barcodes</li>
-              <li>Scan timestamps</li>
-              <li>Your ratings or feedback on products</li>
-            </ul>
-          </section>
+          <Section title="2. Information We Collect">
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-2">2.1 Personal Information</h3>
+                <p>Provided directly by you when you:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Create or update an account</li>
+                  <li>Use premium or waitlist features</li>
+                  <li>Contact support or interact with us on social media</li>
+                </ul>
+                <p className="mt-2">
+                  The information may include your email address, name, profile photo,
+                  authentication data (via Apple/Google), and any preferences you add to your
+                  profile.
+                </p>
+              </div>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">3. How We Use Your Information</h2>
+              <div>
+                <h3 className="text-xl font-semibold mb-2">2.2 Automatically Collected Data</h3>
+                <p>Collected when you access the App:</p>
+                <ul className="list-disc pl-6 space-y-1">
+                  <li>Device information (model, OS version, unique identifiers)</li>
+                  <li>Log data, crash reports, and diagnostic information</li>
+                  <li>Usage analytics, including scan counts and feature usage</li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">2.3 Camera &amp; Barcode Data</h3>
+                <p>
+                  Camera access is required solely to read barcodes. Images or video are not
+                  stored or transmitted. Only the barcode digits are sent securely to our
+                  servers to look up the product.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold mb-2">2.4 Scan History &amp; Preferences</h3>
+                <p>
+                  To personalize recommendations we may store products you scan, timestamps,
+                  allergen settings, favorites, and any notes you add.
+                </p>
+              </div>
+            </div>
+          </Section>
+
+          <Section title="3. How We Use Information">
             <p>We use the information we collect to:</p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>Provide, operate, and maintain our App</li>
-              <li>Improve, personalize, and expand our App features</li>
-              <li>Understand and analyze how you use our App</li>
-              <li>Process your subscription and payment transactions</li>
-              <li>Provide you with product information and nutritional analysis</li>
-              <li>Send you updates, notifications, and support messages</li>
-              <li>Detect, prevent, and address technical issues</li>
-              <li>Respond to your comments, questions, and customer service requests</li>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Provide and personalize product analysis and alerts</li>
+              <li>Improve the App through research and analytics</li>
+              <li>Process subscriptions, promotions, or waitlist entries</li>
+              <li>Communicate important updates, security notices, or support responses</li>
+              <li>Detect, prevent, or investigate fraudulent or harmful activity</li>
             </ul>
-          </section>
+          </Section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">4. Third-Party Service Providers</h2>
-            <p>We work with third-party service providers who provide services on our behalf:</p>
+          <Section title="4. Third-Party Service Providers">
+            <p>We rely on trusted vendors who help us operate the App:</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>
+                <strong>Supabase:</strong> authentication, database storage, and waitlist
+                management.
+              </li>
+              <li>
+                <strong>Analytics &amp; crash tools:</strong> to understand performance and
+                stability (data is aggregated/anonymized when possible).
+              </li>
+              <li>
+                <strong>Apple App Store / Google Play:</strong> for in-app purchases and
+                distribution.
+              </li>
+            </ul>
+            <p className="mt-2">
+              These providers only receive data necessary to deliver their service and must
+              handle it in line with this policy.
+            </p>
+          </Section>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">4.1 Supabase (Authentication & Database)</h3>
+          <Section title="5. Data Sharing &amp; Disclosure">
+            <p>We do not sell your personal information. We may share data only when:</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Working with service providers described above</li>
+              <li>Complying with legal obligations or responding to lawful requests</li>
+              <li>Protecting the safety, rights, or property of Almonds and our users</li>
+              <li>Completing a business transaction such as a merger or acquisition</li>
+            </ul>
+          </Section>
+
+          <Section title="6. Data Retention &amp; Deletion">
             <p>
-              We use Supabase for user authentication and data storage. Supabase complies with GDPR and
-              provides the same level of data protection as stated in this policy. For more information,
-              visit{" "}
+              We retain data only as long as necessary for the purposes outlined in this
+              policy or as required by law. You may request deletion of your account at any
+              time through in-app settings or by contacting support. Upon deletion we remove
+              account details, scan history, saved preferences, and any associated data
+              within 30 days, except where retention is legally required.
+            </p>
+          </Section>
+
+          <Section title="7. Security">
+            <p>
+              We implement administrative, technical, and physical safeguards—encryption in
+              transit and at rest, access controls, routine audits—to protect your
+              information. No system is 100% secure, so please keep your credentials private
+              and notify us if you suspect unauthorized access.
+            </p>
+          </Section>
+
+          <Section title="8. Your Rights">
+            <p>Depending on where you live, you may have the right to:</p>
+            <ul className="list-disc pl-6 space-y-1">
+              <li>Access, correct, or delete your personal information</li>
+              <li>Request a portable copy of your data</li>
+              <li>Restrict or object to certain processing activities</li>
+              <li>Opt out of marketing communications</li>
+            </ul>
+            <p className="mt-2">
+              To submit a request, contact us at{" "}
               <a
-                href="https://supabase.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`mailto:${contactEmail}`}
                 className="text-emerald-600 hover:underline"
               >
-                Supabase Privacy Policy
+                {contactEmail}
               </a>
               .
             </p>
+          </Section>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">4.2 Superwall (Subscription Management)</h3>
+          <Section title="9. Children's Privacy">
             <p>
-              We use Superwall to manage in-app subscriptions and paywalls. Superwall processes
-              subscription-related data in accordance with their privacy policy. For more information,
-              visit{" "}
-              <a
-                href="https://superwall.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-emerald-600 hover:underline"
-              >
-                Superwall Privacy Policy
-              </a>
-              .
+              The App is not intended for children under 13. We do not knowingly collect
+              personal data from children. If you believe a child has provided us
+              information, contact us and we will promptly delete it.
             </p>
+          </Section>
 
-            <h3 className="text-xl font-semibold mt-6 mb-3">4.3 Apple In-App Purchases</h3>
+          <Section title="10. International Data Transfers">
             <p>
-              Subscription purchases are processed through Apple's App Store. We do not have access to
-              your credit card or payment information. Apple's privacy policy governs how your payment
-              information is handled.
+              We operate in the United States but may process data in other countries. When
+              transferring data, we use appropriate safeguards to ensure your information is
+              protected according to this policy and applicable law.
             </p>
-          </section>
+          </Section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">5. Data Sharing and Disclosure</h2>
-            <p>We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:</p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>With service providers who assist in operating our App (as described in Section 4)</li>
-              <li>To comply with legal obligations, court orders, or government requests</li>
-              <li>To protect our rights, privacy, safety, or property</li>
-              <li>In connection with a merger, acquisition, or sale of assets</li>
-            </ul>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">6. Data Retention and Deletion</h2>
+          <Section title="11. Updates to This Policy">
             <p>
-              We retain your personal information only for as long as necessary to fulfill the purposes
-              outlined in this Privacy Policy, unless a longer retention period is required by law.
+              We may update this Privacy Policy to reflect changes in products, legal
+              requirements, or best practices. We will adjust the “Last updated” date above
+              and, when appropriate, notify you through the App or email.
             </p>
-            <p className="mt-4">
-              You have the right to request deletion of your account and associated data at any time
-              through the App's settings. Upon account deletion:
-            </p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>Your personal information will be permanently deleted within 30 days</li>
-              <li>Your scan history and preferences will be removed</li>
-              <li>You will lose access to any premium features associated with your account</li>
-            </ul>
-          </section>
+          </Section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">7. Data Security</h2>
-            <p>
-              We implement appropriate technical and organizational security measures to protect your
-              personal information against unauthorized access, alteration, disclosure, or destruction.
-              These measures include:
-            </p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>Encryption of data in transit and at rest</li>
-              <li>Regular security assessments</li>
-              <li>Restricted access to personal information</li>
-              <li>Secure authentication methods</li>
-            </ul>
-            <p className="mt-4">
-              However, please note that no method of transmission over the internet or electronic storage
-              is 100% secure.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">8. Your Privacy Rights</h2>
-            <p>Depending on your location, you may have the following rights:</p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li><strong>Access:</strong> Request access to your personal information</li>
-              <li><strong>Correction:</strong> Request correction of inaccurate data</li>
-              <li><strong>Deletion:</strong> Request deletion of your personal information</li>
-              <li><strong>Data Portability:</strong> Request a copy of your data in a portable format</li>
-              <li><strong>Opt-Out:</strong> Opt out of certain data collection practices</li>
-            </ul>
-            <p className="mt-4">
-              To exercise these rights, please contact us at{" "}
-              <a href="mailto:support@downloadalmonds.tech" className="text-emerald-600 hover:underline">
-                support@downloadalmonds.tech
-              </a>
-              .
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">9. Children's Privacy</h2>
-            <p>
-              Our App is not intended for children under the age of 13. We do not knowingly collect
-              personal information from children under 13. If you believe we have collected information
-              from a child under 13, please contact us immediately.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">10. International Data Transfers</h2>
-            <p>
-              Your information may be transferred to and processed in countries other than your own. These
-              countries may have different data protection laws. We ensure that appropriate safeguards are
-              in place to protect your information in accordance with this Privacy Policy.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">11. Changes to This Privacy Policy</h2>
-            <p>
-              We may update this Privacy Policy from time to time. We will notify you of any changes by
-              updating the "Last updated" date at the top of this policy. We encourage you to review this
-              Privacy Policy periodically.
-            </p>
-          </section>
-
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">12. Contact Us</h2>
-            <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+          <Section title="12. Contact Us">
+            <p>Questions or requests? Reach us at:</p>
             <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-              <p><strong>Email:</strong>{" "}
-                <a href="mailto:support@downloadalmonds.tech" className="text-emerald-600 hover:underline">
-                  support@downloadalmonds.tech
+              <p>
+                <strong>Email:</strong>{" "}
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className="text-emerald-600 hover:underline"
+                >
+                  {contactEmail}
                 </a>
               </p>
-              <p className="mt-2"><strong>Website:</strong>{" "}
-                <a href="https://downloadalmonds.tech" className="text-emerald-600 hover:underline">
+              <p className="mt-2">
+                <strong>Website:</strong>{" "}
+                <a
+                  href="https://downloadalmonds.tech"
+                  className="text-emerald-600 hover:underline"
+                >
                   downloadalmonds.tech
                 </a>
               </p>
             </div>
-          </section>
+          </Section>
 
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold mb-4">13. California Privacy Rights</h2>
+          <Section title="13. California Privacy Rights">
             <p>
-              If you are a California resident, you have additional rights under the California Consumer
-              Privacy Act (CCPA), including:
+              California residents may exercise additional rights under the California
+              Consumer Privacy Act (CCPA), including the right to know what personal
+              information we collect and how we use it, the right to request deletion, and
+              the right to non-discrimination for exercising these rights. We do not sell
+              personal information.
             </p>
-            <ul className="list-disc pl-6 mt-2 space-y-2">
-              <li>The right to know what personal information we collect and how it's used</li>
-              <li>The right to delete personal information</li>
-              <li>The right to opt-out of the sale of personal information (we do not sell your information)</li>
-              <li>The right to non-discrimination for exercising your privacy rights</li>
-            </ul>
-          </section>
+          </Section>
         </div>
       </div>
 
